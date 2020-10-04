@@ -1,0 +1,24 @@
+---
+title: "Leaflet"
+author: "Javier Vallejos"
+date: "3/10/2020"
+output: html_document
+---
+
+## Map with Leaflet
+
+
+```{r}
+
+library(leaflet)
+
+set.seed(12345)
+
+df <- leaflet() %>% addTiles() %>% addMarkers(lat = -1*(runif(5,min = 16.4, max = 16.5)), lng = -1*(runif(5,min = 68.1, max = 68.2)), clusterOptions = markerClusterOptions() )
+
+df
+
+
+
+```
+
